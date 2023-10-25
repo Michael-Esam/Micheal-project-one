@@ -51,6 +51,7 @@ a {
     }
 }
 
+/* <!-- Start Main Header --> */
 
 .main-header {
     text-transform: uppercase;
@@ -101,31 +102,8 @@ a {
     animation: right linear .5s forwards;
 }
 
-@keyframes left {
-    50% {
-        left: 0px;
-    }
-
-    100% {
-        left: 0px;
-        width: 51%;
-        height: 100%;
-        border-radius: 0;
-    }
-}
-
-@keyframes right {
-    50% {
-        right: 0px;
-    }
-
-    100% {
-        right: 0px;
-        width: 51%;
-        height: 100%;
-        border-radius: 0;
-    }
-}
+/* <!-- End Main Header --> */
+/* <!-- Start Spaike --> */
 
 .spaike-one {
     position: relative;
@@ -157,6 +135,15 @@ a {
     z-index: 1;
 }
 
+@media(max-width:767px) {
+    .spaike-two::after {
+        margin-top: -1px;
+    }
+}
+
+/* <!-- End Spaike --> */
+/* <!-- Start Header --> */
+
 header {
     position: relative;
     width: 100%;
@@ -173,7 +160,6 @@ header .logo {
     font-weight: bold;
     height: 75px;
 }
-
 
 nav {
     display: flex;
@@ -336,7 +322,6 @@ nav .nav>li>a:hover {
     color: var(--main-color);
     font-weight: 600;
     font-size: 18px;
-
 }
 
 .menu .list>ul>li>a>i {
@@ -348,6 +333,9 @@ nav .nav>li>a:hover {
     z-index: 100;
     opacity: 1;
 }
+
+/* <!-- End Header --> */
+/* <!-- Start Landing --> */
 
 .land {
     padding-top: 50px;
@@ -370,7 +358,6 @@ nav .nav>li>a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .land .container .text {
@@ -391,47 +378,11 @@ nav .nav>li>a:hover {
     line-height: 1.6;
 }
 
-
-
 .land .container .image img {
     min-width: 400px;
     width: 100%;
     animation: 5s linear 0s infinite normal none running up-down;
 }
-
-
-@keyframes up-down {
-
-    0%,
-    100% {
-        transform: translateY(20px);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-@media(max-width:991px) {
-    .land .container .image {
-        display: none;
-    }
-
-    .land .container .text {
-        padding: 180px 5%;
-        text-align: center;
-    }
-
-    .land .container .text p {
-        font-size: 18px;
-
-    }
-
-    .land .container .text h1 {
-        font-size: 30px;
-    }
-}
-
 
 .land a {
     position: absolute;
@@ -445,23 +396,8 @@ nav .nav>li>a:hover {
     animation: 1.5s 0s infinite normal none running up-and-down;
 }
 
-@keyframes up-and-down {
-
-    0%,
-    10%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    60%,
-    40% {
-        transform: translateY(-10px);
-    }
-}
-
+/* <!-- End Landing --> */
+/* <!-- start Articles --> */
 
 .articles {
     padding-top: 100px;
@@ -529,18 +465,8 @@ nav .nav>li>a:hover {
     animation: .6s linear 0s infinite normal none running arrow;
 }
 
-@keyframes arrow {
-
-
-    60% {
-        transform: translateX(5px);
-    }
-
-    100% {
-        transform: translateX(10px);
-    }
-}
-
+/* <!-- End Articles --> */
+/* <!-- Start Gallery --> */
 
 .gallery {
     padding-top: 100px;
@@ -557,6 +483,7 @@ nav .nav>li>a:hover {
 .gallery .container .box {
     padding: 15px;
     background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%)
 }
 
 .gallery .container .image {
@@ -592,19 +519,8 @@ nav .nav>li>a:hover {
     transform: scale(1.1) rotate(6deg);
 }
 
-@keyframes flash {
-
-    0%,
-    35% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-        width: 150%;
-        height: 150%;
-    }
-}
+/* <!-- End Gallery --> */
+/* <!-- Start Features --> */
 
 .features {
     padding-top: 100px;
@@ -627,7 +543,6 @@ nav .nav>li>a:hover {
 .features .container .box .imag {
     position: relative;
     overflow: hidden;
-
 }
 
 .features .container .box img {
@@ -689,7 +604,6 @@ nav .nav>li>a:hover {
     width: 75%;
     left: 50%;
     transform: translatex(-50%);
-
 }
 
 .features .container .quality h1::after {
@@ -722,7 +636,6 @@ nav .nav>li>a:hover {
     width: fit-content;
     transition: var(--main-transition);
     display: block;
-
 }
 
 .features .container .quality a {
@@ -754,6 +667,8 @@ nav .nav>li>a:hover {
     color: white;
 }
 
+/* <!-- End Features --> */
+/* <!-- Start Testimonials --> */
 
 .testimonials {
     padding-top: 100px;
@@ -794,7 +709,6 @@ nav .nav>li>a:hover {
     border-radius: 7px;
     box-shadow: 0 2px 4px rgba(75, 75, 75, 0.07);
     padding: 20px;
-
 }
 
 .testimonials .container .box .t-text h3 {
@@ -827,6 +741,8 @@ nav .nav>li>a:hover {
     ;
 }
 
+/* <!-- End Testimonials --> */
+/* <!-- Start TeamMembers --> */
 
 .team-members {
     padding-top: 100px;
@@ -942,6 +858,8 @@ nav .nav>li>a:hover {
     margin-bottom: 25px;
 }
 
+/* <!-- End TeamMembers --> */
+/* <!-- Start Services --> */
 
 .services {
     padding-top: 100px;
@@ -982,7 +900,6 @@ nav .nav>li>a:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
 }
-
 
 .services .container .serv-box .title {
     text-align: center;
@@ -1048,6 +965,9 @@ nav .nav>li>a:hover {
     padding: 14px;
 }
 
+/* <!-- End Services --> */
+/* <!-- Start OurSkills --> */
+
 .our-skills {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1098,9 +1018,8 @@ nav .nav>li>a:hover {
     transition: width .6s linear;
 }
 
-
-
-
+/* <!-- End OurSkills --> */
+/* <!-- Start HowItWorks --> */
 
 .how {
     padding-top: 100px;
@@ -1197,7 +1116,8 @@ nav .nav>li>a:hover {
     color: #777;
 }
 
-
+/* <!-- End HowItWorks --> */
+/* <!-- Start Events --> */
 
 
 .events {
@@ -1246,7 +1166,6 @@ nav .nav>li>a:hover {
 
 .events .container .time {
     flex: 1;
-
 }
 
 .events .container .time .boxs {
@@ -1254,7 +1173,6 @@ nav .nav>li>a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-
 }
 
 .events .container .time .boxs .box {
@@ -1307,7 +1225,6 @@ nav .nav>li>a:hover {
 .events .container .email {
     width: 100%;
     margin-top: 50px;
-
 }
 
 .events .container .email form {
@@ -1364,6 +1281,8 @@ nav .nav>li>a:hover {
     background-color: #157ed4;
 }
 
+/* <!-- End Events --> */
+/* <!-- Start Pricing --> */
 
 .pricing {
     padding-top: 100px;
@@ -1519,6 +1438,8 @@ nav .nav>li>a:hover {
     color: white;
 }
 
+/* <!-- End Pricing --> */
+/* <!-- Start Video --> */
 
 .video {
     padding-top: 100px;
@@ -1597,6 +1518,9 @@ nav .nav>li>a:hover {
     font-size: 18px;
     font-weight: 600;
 }
+
+/* <!-- End Video --> */
+/* <!-- Start Stats --> */
 
 
 .stats {
@@ -1689,7 +1613,8 @@ nav .nav>li>a:hover {
     margin-bottom: 30px;
 }
 
-
+/* <!-- End Stats --> */
+/* <!-- Start Discount --> */
 
 .discount {
     display: flex;
@@ -1711,18 +1636,6 @@ nav .nav>li>a:hover {
     color: white;
     flex-basis: 50%;
     animation: change-background 10s linear infinite;
-}
-
-@keyframes change-background {
-
-    0%,
-    100% {
-        background-image: url(../img/discount-background1.jpg);
-    }
-
-    50% {
-        background-image: url(../img/discount-background2.jpg);
-    }
 }
 
 @media(max-width:991px) {
@@ -1756,7 +1669,6 @@ nav .nav>li>a:hover {
     font-size: 18px;
     font-weight: 500;
     max-width: 500px;
-
 }
 
 .discount .image img {
@@ -1764,8 +1676,6 @@ nav .nav>li>a:hover {
     width: 300px;
     max-width: 100%;
 }
-
-
 
 .discount .email {
     flex-basis: 50%;
@@ -1778,6 +1688,7 @@ nav .nav>li>a:hover {
     .discount .email {
         flex-basis: 100%;
         margin-bottom: 30px;
+        padding: 19px 5px;
     }
 }
 
@@ -1792,7 +1703,6 @@ nav .nav>li>a:hover {
     font-size: 40px;
     letter-spacing: -2px;
 }
-
 
 .discount .email form input[type="text"],
 .discount .email form input[type="email"],
@@ -1834,6 +1744,8 @@ textarea {
     background-color: #157ed4;
 }
 
+/* <!-- End Discount --> */
+/* <!-- Start Footer --> */
 
 footer {
     background-color: #191919;
@@ -1893,7 +1805,6 @@ footer .container .social p {
     line-height: 2;
 }
 
-
 footer .container .list ul {
     padding: 0;
 }
@@ -1921,7 +1832,6 @@ footer .container .list ul li:hover {
     color: white;
     transform: translateX(10px);
 }
-
 
 footer .container .info .box {
     display: flex;
@@ -1971,3 +1881,120 @@ footer .copyright span {
     font-size: 18px;
     font-weight: bold;
 }
+
+/* <!-- End Footer --> */
+/* <!-- Animation --> */
+
+@keyframes left {
+    50% {
+        left: 0px;
+    }
+
+    100% {
+        left: 0px;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes right {
+    50% {
+        right: 0px;
+    }
+
+    100% {
+        right: 0px;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes up-down {
+
+    0%,
+    100% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media(max-width:991px) {
+    .land .container .image {
+        display: none;
+    }
+
+    .land .container .text {
+        padding: 180px 5%;
+        text-align: center;
+    }
+
+    .land .container .text p {
+        font-size: 18px;
+
+    }
+
+    .land .container .text h1 {
+        font-size: 30px;
+    }
+}
+
+@keyframes up-and-down {
+
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    60%,
+    40% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes arrow {
+
+    60% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes flash {
+
+    0%,
+    35% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        width: 150%;
+        height: 150%;
+    }
+}
+
+@keyframes change-background {
+
+    0%,
+    100% {
+        background-image: url(../img/discount-background1.jpg);
+    }
+
+    50% {
+        background-image: url(../img/discount-background2.jpg);
+    }
+}
+
+/*...................................................................... Ez................................................................... */
